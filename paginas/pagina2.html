@@ -45,16 +45,75 @@ document.addEventListener("DOMContentLoaded", () => {
         <a href="#herramientas">Herramientas de calidad</a>
     </div>
     <div id="fundamentos" class="fundamentos">
-        <h1>Fundamentos</h1>
-        <p>Informacion</p>
-    </div>
-    <div id="tecnicas" class="tecnicas">
-        <h1>Tecnicas</h1>
-        <p>Informacion</p>
-    </div>
-    <div id="herramientas" class="herramientas">
-        <h1>Herramientas</h1>
-        <p>Informacion</p>
-    </div>
+    <h1>Fundamentos de la Calidad del Software</h1>
+    <p>
+        La calidad del software es la capacidad de un producto para cumplir con los requisitos del usuario y los objetivos del negocio. 
+        No se trata solo de que un sistema “funcione”, sino de que lo haga de manera confiable, eficiente, segura y fácil de mantener.
+    </p>
+
+    <h2>Conceptos clave de calidad</h2>
+    <ul>
+        <li><strong>Confiabilidad:</strong> que el software funcione correctamente bajo distintas condiciones.</li>
+        <li><strong>Usabilidad:</strong> facilidad de uso e interacción para el usuario.</li>
+        <li><strong>Mantenibilidad:</strong> capacidad de actualizar, corregir y mejorar el sistema sin grandes costos.</li>
+        <li><strong>Eficiencia:</strong> buen rendimiento con el uso óptimo de recursos.</li>
+        <li><strong>Portabilidad:</strong> posibilidad de utilizar el software en distintos entornos.</li>
+    </ul>
+
+    <h2>Métricas de calidad</h2>
+    <p>Las métricas permiten medir y controlar la calidad. Ejemplos:</p>
+    <ul>
+        <li>Número de defectos encontrados por fase.</li>
+        <li>Cobertura de pruebas (% de código probado).</li>
+        <li>Tiempo medio para resolver fallas.</li>
+        <li>Satisfacción del usuario final.</li>
+    </ul>
+
+    <h2>Estándares internacionales (ISO 9126 / ISO 25000)</h2>
+    <ul>
+        <li><strong>ISO 9126:</strong> definía seis características principales de calidad (funcionalidad, fiabilidad, usabilidad, eficiencia, mantenibilidad y portabilidad).</li>
+        <li><strong>ISO 25000 (SQuaRE):</strong> evolución de la ISO 9126, que establece un marco actualizado para evaluar la calidad del software y de su proceso de desarrollo.</li>
+    </ul>
+</div>
+
+<div id="tecnicas" class="tecnicas">
+    <h1>Técnicas de Aseguramiento de la Calidad</h1>
+    <p>
+        El Aseguramiento de la Calidad (QA) busca prevenir errores y garantizar que el software cumpla los estándares definidos.
+    </p>
+
+    <h2>Pruebas de software</h2>
+    <ul>
+        <li><strong>Tipos:</strong> funcionales (validan lo que el sistema debe hacer) y no funcionales (rendimiento, seguridad, usabilidad).</li>
+        <li><strong>Niveles:</strong>
+            <ul>
+                <li>Unitarias (validan componentes pequeños).</li>
+                <li>Integración (verifican interacción entre módulos).</li>
+                <li>Sistema (evalúan el software completo).</li>
+                <li>Aceptación (realizadas por el cliente/usuario).</li>
+            </ul>
+        </li>
+        <li><strong>Técnicas:</strong>
+            <ul>
+                <li>Caja negra: se prueban entradas y salidas sin conocer el código.</li>
+                <li>Caja blanca: se analiza la lógica interna del código.</li>
+                <li>Exploratorias: pruebas dinámicas sin guiones predefinidos.</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div id="herramientas" class="herramientas">
+    <h1>Herramientas de Calidad</h1>
+    <p>
+        Para apoyar la gestión de calidad se utilizan herramientas que facilitan el trabajo en equipo y la trazabilidad de los defectos:
+    </p>
+    <ul>
+        <li><strong>Gestión de pruebas:</strong> permiten planificar, ejecutar y documentar pruebas (ej.: TestRail, Zephyr).</li>
+        <li><strong>Seguimiento de defectos:</strong> registran, priorizan y gestionan errores reportados (ej.: Jira, Bugzilla).</li>
+        <li><strong>Análisis de calidad:</strong> miden la calidad del código fuente y detectan vulnerabilidades (ej.: SonarQube).</li>
+    </ul>
+</div>
+
 </body>
 </html>
