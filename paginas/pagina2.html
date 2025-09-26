@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../Css/pagina2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll(".barraLateral a");
+    const secciones = document.querySelectorAll(".fundamentos, .tecnicas, .herramientas");
+
+    links.forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const objetivo = link.getAttribute("href").replace("#", "").toLowerCase();
+
+            secciones.forEach(sec => sec.style.display = "none");
+
+            if (objetivo.includes("fundamentos")) {
+                document.querySelector(".fundamentos").style.display = "block";
+            } else if (objetivo.includes("tecnicas")) {
+                document.querySelector(".tecnicas").style.display = "block";
+            } else if (objetivo.includes("herramientas")) {
+                document.querySelector(".herramientas").style.display = "block";
+            }
+        });
+    });
+
+    document.querySelector(".fundamentos").style.display = "block";
+});
+</script>
+<body>
+    <header>
+        <h2><a href="">Gestion de software</a></h2>
+        <h2><a href="">Procesos de desarrollo</a></h2>
+        <h2><a href="">Metodologias Agiles</a></h2>
+        <h2><a href="">Recursos y aprendizaje</a></h2>
+        <h2><a href="">Sobre nosotros</a></h2>
+    </header>
+    <div class="barraLateral">
+        <a href="#fundamentos">Fundamentos</a>
+        <a href="#tecnicas">Tecnicas de aseguramiento de calidad</a>
+        <a href="#herramientas">Herramientas de calidad</a>
+    </div>
+    <div id="fundamentos" class="fundamentos">
+        <h1>Fundamentos</h1>
+        <p>Informacion</p>
+    </div>
+    <div id="tecnicas" class="tecnicas">
+        <h1>Tecnicas</h1>
+        <p>Informacion</p>
+    </div>
+    <div id="herramientas" class="herramientas">
+        <h1>Herramientas</h1>
+        <p>Informacion</p>
+    </div>
+</body>
+</html>

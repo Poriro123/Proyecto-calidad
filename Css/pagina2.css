@@ -1,0 +1,76 @@
+/* --- ESTILO GENERAL --- */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(90deg, #ff4b2b, #ff9068);
+    color: white;
+}
+
+/* --- HEADER --- */
+header {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.barraLateral {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding: 15px;
+    border-right: 1px solid white;
+    position: fixed;
+    top: 70px;
+    bottom: 0;
+    left: 0;
+}
+
+.barraLateral a {
+    display: block;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 8px 0;
+    transition: color 0.3s;
+}
+
+.barraLateral a:hover {
+    color: #ffdede;
+}
+
+/* --- CONTENIDO DE LA SECCIÓN --- */
+.fundamentos, .tecnicas, .herramientas {
+    margin-left: 280px;
+    padding: 30px;
+    text-align: center;
+}
+
+.fundamentos h1, .tecnicas h1, .herramientas h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.fundamentos p, .tecnicas p, .herramientas p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- OPCIONAL: HACER VISIBLE SOLO LA SECCIÓN SELECCIONADA --- */
+.tecnicas, .herramientas {
+    display: none; /* Oculta por defecto, puedes usar JS para mostrar según el link */
+}
