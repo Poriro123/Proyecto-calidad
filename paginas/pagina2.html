@@ -44,76 +44,141 @@ document.addEventListener("DOMContentLoaded", () => {
         <a href="#tecnicas">Tecnicas de aseguramiento de calidad</a>
         <a href="#herramientas">Herramientas de calidad</a>
     </div>
-    <div id="fundamentos" class="fundamentos">
-    <h1>Fundamentos de la Calidad del Software</h1>
-    <p>
-        La calidad del software es la capacidad de un producto para cumplir con los requisitos del usuario y los objetivos del negocio. 
-        No se trata solo de que un sistema “funcione”, sino de que lo haga de manera confiable, eficiente, segura y fácil de mantener.
-    </p>
+<div id="fundamentos" class="fundamentos">
+  <h1>Fundamentos de la Calidad del Software</h1>
 
-    <h2>Conceptos clave de calidad</h2>
-    <ul>
-        <li><strong>Confiabilidad:</strong> que el software funcione correctamente bajo distintas condiciones.</li>
-        <li><strong>Usabilidad:</strong> facilidad de uso e interacción para el usuario.</li>
-        <li><strong>Mantenibilidad:</strong> capacidad de actualizar, corregir y mejorar el sistema sin grandes costos.</li>
-        <li><strong>Eficiencia:</strong> buen rendimiento con el uso óptimo de recursos.</li>
-        <li><strong>Portabilidad:</strong> posibilidad de utilizar el software en distintos entornos.</li>
-    </ul>
+  <h2>Confiabilidad</h2>
+  <p><strong>Descripción:</strong> La confiabilidad mide la capacidad del software para funcionar correctamente bajo diferentes condiciones sin fallos. Un sistema confiable asegura que las operaciones críticas se completen correctamente incluso en escenarios adversos.</p>
+  <p><strong>Ejemplo:</strong> Un sistema bancario debe realizar transferencias sin errores, incluso bajo alta carga de usuarios.</p>
+  <p><strong>Caso de uso:</strong> Validar que una aplicación de homebanking no pierda transacciones aunque falle la conexión a internet.</p>
 
-    <h2>Métricas de calidad</h2>
-    <p>Las métricas permiten medir y controlar la calidad. Ejemplos:</p>
-    <ul>
-        <li>Número de defectos encontrados por fase.</li>
-        <li>Cobertura de pruebas (% de código probado).</li>
-        <li>Tiempo medio para resolver fallas.</li>
-        <li>Satisfacción del usuario final.</li>
-    </ul>
+  <h2>Usabilidad</h2>
+  <p><strong>Descripción:</strong> La usabilidad evalúa la facilidad con la que un usuario puede aprender a utilizar y operar un sistema. Incluye aspectos como diseño intuitivo, accesibilidad y experiencia del usuario.</p>
+  <p><strong>Ejemplo:</strong> Una app de delivery con interfaz intuitiva.</p>
+  <p><strong>Caso de uso:</strong> Un nuevo usuario puede registrarse y hacer su primer pedido sin necesidad de un manual.</p>
 
-    <h2>Estándares internacionales (ISO 9126 / ISO 25000)</h2>
-    <ul>
-        <li><strong>ISO 9126:</strong> definía seis características principales de calidad (funcionalidad, fiabilidad, usabilidad, eficiencia, mantenibilidad y portabilidad).</li>
-        <li><strong>ISO 25000 (SQuaRE):</strong> evolución de la ISO 9126, que establece un marco actualizado para evaluar la calidad del software y de su proceso de desarrollo.</li>
-    </ul>
+  <h2>Mantenibilidad</h2>
+  <p><strong>Descripción:</strong> La mantenibilidad indica qué tan fácil es corregir, actualizar o mejorar el software sin introducir nuevos errores ni incurrir en altos costos.</p>
+  <p><strong>Ejemplo:</strong> Código modular y documentado en un ERP.</p>
+  <p><strong>Caso de uso:</strong> El equipo puede cambiar la regla de cálculo de impuestos sin afectar otras funciones.</p>
+
+  <h2>Eficiencia</h2>
+  <p><strong>Descripción:</strong> La eficiencia se refiere al uso óptimo de los recursos del sistema, asegurando buen rendimiento y tiempos de respuesta adecuados.</p>
+  <p><strong>Ejemplo:</strong> Una app de transporte que calcula rutas en segundos.</p>
+  <p><strong>Caso de uso:</strong> El sistema de Uber debe responder en tiempo real al buscar autos cercanos.</p>
+
+  <h2>Portabilidad</h2>
+  <p><strong>Descripción:</strong> La portabilidad es la capacidad de que el software funcione en distintos entornos o plataformas sin necesidad de modificaciones importantes.</p>
+  <p><strong>Ejemplo:</strong> Un software de gestión que funciona en Windows, Linux y macOS.</p>
+  <p><strong>Caso de uso:</strong> Una empresa cambia de servidores Windows a Linux sin necesidad de reescribir el sistema.</p>
+
+
+
+  <h1>Métricas de Calidad</h1>
+
+  <h2>Número de defectos encontrados por fase</h2>
+  <p><strong>Descripción:</strong> Métrica que mide la cantidad de errores detectados en cada etapa del desarrollo, ayudando a evaluar la efectividad de las pruebas.</p>
+  <p><strong>Ejemplo:</strong> En pruebas unitarias se detectaron 30 errores, y en integración 10.</p>
+  <p><strong>Caso de uso:</strong> Permite saber si los errores se corrigen antes de llegar al cliente.</p>
+
+  <h2>Cobertura de pruebas</h2>
+  <p><strong>Descripción:</strong> Porcentaje de código ejecutado al correr pruebas automatizadas o manuales. Una alta cobertura reduce el riesgo de errores no detectados.</p>
+  <p><strong>Ejemplo:</strong> Un proyecto tiene 85% de cobertura con JUnit.</p>
+  <p><strong>Caso de uso:</strong> Garantizar que la mayoría de los métodos críticos del sistema estén verificados.</p>
+
+  <h2>Tiempo medio para resolver fallas</h2>
+  <p><strong>Descripción:</strong> Promedio del tiempo que tarda un equipo en identificar, diagnosticar y resolver un defecto reportado.</p>
+  <p><strong>Ejemplo:</strong> Un bug reportado se soluciona en promedio en 2 días.</p>
+  <p><strong>Caso de uso:</strong> Medir la eficiencia del equipo de soporte y desarrollo.</p>
+
+  <h2>Satisfacción del usuario final</h2>
+  <p><strong>Descripción:</strong> Mide el grado de conformidad del cliente con el software mediante encuestas, entrevistas o análisis de uso.</p>
+  <p><strong>Ejemplo:</strong> Encuestas de usabilidad en una app educativa.</p>
+  <p><strong>Caso de uso:</strong> Ajustar la interfaz si los usuarios califican la experiencia como “difícil”.</p>
+
+
+
+  <h1>Estándares Internacionales</h1>
+
+  <h2>ISO 9126</h2>
+  <p><strong>Descripción:</strong> Definía seis características principales de calidad: funcionalidad, fiabilidad, usabilidad, eficiencia, mantenibilidad y portabilidad.</p>
+  <p><strong>Ejemplo:</strong> Una empresa de software en salud aplica este estándar para garantizar fiabilidad y seguridad.</p>
+  <p><strong>Caso de uso:</strong> Certificar que la historia clínica electrónica cumpla con requisitos de interoperabilidad.</p>
+
+  <h2>ISO 25000 (SQuaRE)</h2>
+  <p><strong>Descripción:</strong> Evolución de ISO 9126 que establece un marco actualizado para evaluar la calidad del software y del proceso de desarrollo.</p>
+  <p><strong>Ejemplo:</strong> Uso en proyectos de gobierno digital.</p>
+  <p><strong>Caso de uso:</strong> Evaluar la calidad de un sistema de gestión tributaria antes de su implementación nacional.</p>
+
 </div>
-
 <div id="tecnicas" class="tecnicas">
-    <h1>Técnicas de Aseguramiento de la Calidad</h1>
-    <p>
-        El Aseguramiento de la Calidad (QA) busca prevenir errores y garantizar que el software cumpla los estándares definidos.
-    </p>
+  <h1>Técnicas de Prueba</h1>
 
-    <h2>Pruebas de software</h2>
-    <ul>
-        <li><strong>Tipos:</strong> funcionales (validan lo que el sistema debe hacer) y no funcionales (rendimiento, seguridad, usabilidad).</li>
-        <li><strong>Niveles:</strong>
-            <ul>
-                <li>Unitarias (validan componentes pequeños).</li>
-                <li>Integración (verifican interacción entre módulos).</li>
-                <li>Sistema (evalúan el software completo).</li>
-                <li>Aceptación (realizadas por el cliente/usuario).</li>
-            </ul>
-        </li>
-        <li><strong>Técnicas:</strong>
-            <ul>
-                <li>Caja negra: se prueban entradas y salidas sin conocer el código.</li>
-                <li>Caja blanca: se analiza la lógica interna del código.</li>
-                <li>Exploratorias: pruebas dinámicas sin guiones predefinidos.</li>
-            </ul>
-        </li>
-    </ul>
+  <h2>Pruebas funcionales</h2>
+  <p><strong>Descripción:</strong> Verifican que el software realice correctamente las funciones especificadas en los requisitos.</p>
+  <p><strong>Ejemplo:</strong> Probar que un carrito de compras en e-commerce calcule bien los precios.</p>
+  <p><strong>Caso de uso:</strong> El cliente agrega 3 productos y el sistema muestra el total correcto.</p>
+
+  <h2>Pruebas no funcionales</h2>
+  <p><strong>Descripción:</strong> Evalúan características como rendimiento, seguridad, escalabilidad y usabilidad.</p>
+  <p><strong>Ejemplo:</strong> Test de carga en un portal educativo en época de inscripciones.</p>
+  <p><strong>Caso de uso:</strong> Verificar que soporte 10.000 usuarios simultáneos.</p>
+
+  <h2>Unitarias</h2>
+  <p><strong>Descripción:</strong> Se enfocan en probar pequeños componentes del software, generalmente funciones o métodos.</p>
+  <p><strong>Ejemplo:</strong> Probar un método de cálculo de intereses.</p>
+  <p><strong>Caso de uso:</strong> Asegurar que el módulo de finanzas funciona antes de integrarlo.</p>
+
+  <h2>Integración</h2>
+  <p><strong>Descripción:</strong> Verifican que los diferentes módulos o subsistemas interactúen correctamente entre sí.</p>
+  <p><strong>Ejemplo:</strong> Probar interacción entre el módulo de facturación y el de stock.</p>
+  <p><strong>Caso de uso:</strong> Al facturar un producto, el stock debe descontarse automáticamente.</p>
+
+  <h2>Sistema</h2>
+  <p><strong>Descripción:</strong> Evalúan el comportamiento global del sistema, asegurando que cumpla con los requisitos funcionales y no funcionales.</p>
+  <p><strong>Ejemplo:</strong> Evaluar un sistema completo de turnos médicos.</p>
+  <p><strong>Caso de uso:</strong> Validar que desde la creación del turno hasta el envío del recordatorio por mail funcione.</p>
+
+  <h2>Aceptación</h2>
+  <p><strong>Descripción:</strong> Pruebas realizadas por el cliente o usuario final para validar que el software cumple con sus necesidades reales.</p>
+  <p><strong>Ejemplo:</strong> Cliente prueba un sistema de gestión de clientes (CRM).</p>
+  <p><strong>Caso de uso:</strong> El usuario valida que puede registrar y buscar clientes de acuerdo a sus necesidades.</p>
+
+  <h2>Caja negra</h2>
+  <p><strong>Descripción:</strong> Método de prueba que se centra en entradas y salidas sin conocer la lógica interna del código.</p>
+  <p><strong>Ejemplo:</strong> Probar login con usuario y contraseña.</p>
+  <p><strong>Caso de uso:</strong> No importa el código, solo que la validación sea correcta.</p>
+
+  <h2>Caja blanca</h2>
+  <p><strong>Descripción:</strong> Analiza la lógica interna y la cobertura de código, asegurando que todas las ramas y condiciones se prueben.</p>
+  <p><strong>Ejemplo:</strong> Revisar que un algoritmo de encriptación cumpla su lógica.</p>
+  <p><strong>Caso de uso:</strong> Analizar el flujo interno del código para cubrir todas las ramas.</p>
+
+  <h2>Exploratorias</h2>
+  <p><strong>Descripción:</strong> Pruebas dinámicas realizadas sin guiones predefinidos, basadas en la experiencia y creatividad del tester.</p>
+  <p><strong>Ejemplo:</strong> Un tester navega libremente por un sistema de reservas.</p>
+  <p><strong>Caso de uso:</strong> Descubrir errores no previstos en los casos de prueba formales.</p>
 </div>
 
 <div id="herramientas" class="herramientas">
-    <h1>Herramientas de Calidad</h1>
-    <p>
-        Para apoyar la gestión de calidad se utilizan herramientas que facilitan el trabajo en equipo y la trazabilidad de los defectos:
-    </p>
-    <ul>
-        <li><strong>Gestión de pruebas:</strong> permiten planificar, ejecutar y documentar pruebas (ej.: TestRail, Zephyr).</li>
-        <li><strong>Seguimiento de defectos:</strong> registran, priorizan y gestionan errores reportados (ej.: Jira, Bugzilla).</li>
-        <li><strong>Análisis de calidad:</strong> miden la calidad del código fuente y detectan vulnerabilidades (ej.: SonarQube).</li>
-    </ul>
+  <h1>Herramientas de Calidad</h1>
+
+  <h2>Gestión de pruebas (TestRail, Zephyr)</h2>
+  <p><strong>Descripción:</strong> Herramientas que permiten planificar, ejecutar y documentar pruebas, facilitando la trazabilidad.</p>
+  <p><strong>Ejemplo:</strong> Registrar casos de prueba para una app bancaria.</p>
+  <p><strong>Caso de uso:</strong> Controlar qué pruebas se ejecutaron, cuáles pasaron y cuáles fallaron.</p>
+
+  <h2>Seguimiento de defectos (Jira, Bugzilla)</h2>
+  <p><strong>Descripción:</strong> Sistemas que permiten registrar, priorizar, asignar y dar seguimiento a los errores detectados en el software.</p>
+  <p><strong>Ejemplo:</strong> Reportar un bug que impide descargar un informe en PDF.</p>
+  <p><strong>Caso de uso:</strong> Asignar el bug a un desarrollador y darle seguimiento hasta su resolución.</p>
+
+  <h2>Análisis de calidad (SonarQube)</h2>
+  <p><strong>Descripción:</strong> Herramientas que miden la calidad del código fuente y detectan vulnerabilidades o malas prácticas.</p>
+  <p><strong>Ejemplo:</strong> Detectar código duplicado en un proyecto Java.</p>
+  <p><strong>Caso de uso:</strong> Prevenir problemas de mantenibilidad y mejorar la calidad del código fuente.</p>
 </div>
+
 
 </body>
 </html>
