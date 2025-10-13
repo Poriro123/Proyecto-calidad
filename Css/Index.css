@@ -7,7 +7,6 @@ body {
     text-align: center;
 }
 
-/*HEADER*/
 header {
     display: flex;
     justify-content: center;
@@ -27,7 +26,6 @@ header a:hover {
     text-decoration: underline;
 }
 
-/* INTRO */
 .introInicio h1 {
     font-size: 2rem;
     margin: 10px 0 5px 0;
@@ -38,7 +36,6 @@ header a:hover {
     margin-bottom: 30px;
 }
 
-/* SECCIONES*/
 .Gestion, .Procesos, .Metodologias, .Recursos, .Sobre {
     background: transparent;
     border: 1px solid white;
@@ -53,13 +50,11 @@ header a:hover {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Hover */
 .Gestion:hover, .Procesos:hover, .Metodologias:hover, .Recursos:hover, .Sobre:hover {
     transform: scale(1.03);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/*CUADROS*/
 .Gestion h2, .Procesos h2, .Metodologias h2, .Recursos h2, .Sobre h2 {
     font-size: 1.1rem;
     margin: 0 0 10px 0;

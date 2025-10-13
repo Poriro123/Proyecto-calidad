@@ -24,7 +24,6 @@ header a:hover {
     text-decoration: underline;
 }
 
-
 .barraLateral {
     display: flex;
     flex-direction: column;
@@ -38,7 +37,6 @@ header a:hover {
 }
 
 .barraLateral a {
-    display: block;
     color: white;
     font-size: 14px;
     text-decoration: none;
@@ -50,25 +48,63 @@ header a:hover {
     color: #ffdede;
 }
 
-
-.fundamentos, .tecnicas, .herramientas {
+main {
     margin-left: 280px;
     padding: 30px;
+}
+
+.seccion {
+    margin-bottom: 50px;
+}
+
+.seccion h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
     text-align: center;
 }
 
-.fundamentos h1, .tecnicas h1, .herramientas h1 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+.seccion h2 {
+    font-size: 1.3rem;
+    margin-top: 25px;
+    text-decoration: underline;
 }
 
-.fundamentos p, .tecnicas p, .herramientas p {
+.seccion p, .seccion ul {
     font-size: 1rem;
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 800px;
+    line-height: 1.5;
 }
 
+ul {
+    list-style: square;
+    padding-left: 20px;
+}
 
-.tecnicas, .herramientas {
-    display: none; 
+.imagen {
+    display: block;
+    margin: 15px auto;
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
+@media (max-width: 768px) {
+    .barraLateral {
+        position: relative;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid white;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .imagen {
+        max-width: 100%;
+    }
 }
