@@ -1,115 +1,275 @@
 /* --- ESTILO GENERAL --- */
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(90deg, #ff4b2b, #ff9068);
-  color: white;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif; /* Fuente de la página 5 */
+    background: linear-gradient(90deg, #ff4b2b, #ff9068);
+    color: white;
 }
 
 /* --- HEADER --- */
 header {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  padding: 15px 0;
-  font-size: 14px;
-  font-weight: bold;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 0;
+    font-size: 14px; /* Tamaño de la página 5 */
+    font-weight: bold;
 }
 
 header a {
-  text-decoration: none;
-  color: white;
-  transition: 0.3s;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-header a:hover {
-  text-decoration: underline;
+header a:hover,
+header .activo {
+    /* Estilo hover/activo de la página 5 */
+    border-bottom: none;
+    text-decoration: underline;
 }
 
-/* --- BARRA LATERAL --- */
+/* --- ESTRUCTURA GENERAL --- */
+.contenedor {
+    /* Este contenedor se puede ignorar o eliminar en el HTML si solo se usa para el flex de la página 6 */
+    display: block; 
+    min-height: auto;
+}
+
+/* --- BARRA LATERAL (Estilo de la página 5: Fija) --- */
 .barraLateral {
-  display: flex;
-  flex-direction: column;
-  width: 250px;
-  padding: 15px;
-  border-right: 1px solid white;
-  position: fixed;
-  top: 70px;
-  bottom: 0;
-  left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding: 15px;
+    border-right: 1px solid white;
+    position: fixed;
+    top: 70px; /* Ajuste si tu header tiene otro alto */
+    bottom: 0;
+    left: 0;
 }
 
 .barraLateral a {
-  color: white;
-  font-size: 14px;
-  text-decoration: none;
-  margin: 8px 0;
-  transition: color 0.3s;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: normal; 
+    margin: 8px 0;
+    transition: color 0.3s;
 }
 
-.barraLateral a:hover {
-  color: #ffdede;
+.barraLateral a:hover,
+.barraLateral .activo {
+    /* Estilo hover/activo de la página 5 */
+    border-bottom: none;
+    color: #ffdede;
 }
 
-/* --- CONTENIDO PRINCIPAL --- */
-main {
-  margin-left: 280px;
-  padding: 30px;
+/* --- CONTENIDO PRINCIPAL (Adaptado de .contenido a la estructura de página 5) --- */
+.contenido {
+    /* Crea espacio para la barra lateral fija */
+    margin-left: 280px; 
+    padding: 40px; 
+    text-align: left; /* Generalmente el contenido no está centrado */
+    flex-grow: 1; /* Mantenido por si se usa en algún contexto */
 }
 
-.seccion {
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-.seccion h1 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  text-align: center;
+h2 {
+    margin: 10px 0;
 }
 
-.seccion h2  {
-  margin-top: 15px;
-  text-decoration: underline;
-  text-align: center;
-}
-.seccion h3  {
-  margin-top: 15px;
-  text-align: center;
-}
-
-.seccion p{
-  margin-left: 350px;
-  font-size: 1rem;
-  max-width: 800px;
-  line-height: 1.5;
+h3 {
+    margin-top: 15px;
+    text-decoration: underline;
+    font-weight: normal;
 }
 
 ul {
-  list-style: square;
-  padding-left: 20px;
+    list-style: square; /* Estilo de la página 5 */
+    padding-left: 20px;
+    margin-top: 10px;
+    line-height: 1.5; 
 }
 
 ul a {
-  color: #fff6f6;
-  text-decoration: underline;
+    color: #fff6f6;
+    text-decoration: underline;
 }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 768px) {
-  .barraLateral {
-    position: relative;
-    width: 100%;
-    border-right: none;
-    border-bottom: 1px solid white;
-    flex-direction: row;
-    justify-content: space-around;
-  }
+/* ---------- FORMULARIO DE CONTACTO (Mantenido de la página 6) ---------- */
+form {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 450px;
+    margin: 30px auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
 
-  main {
-    margin-left: 0;
-    padding: 15px;
-  }
+form:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #fff;
+}
+
+input, textarea {
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 1em;
+    background: rgba(255,255,255,0.9);
+    color: #333;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 8px #ffe082;
+}
+
+button {
+    border: none;
+    background: white;
+    color: #ff4b2b;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1em;
+}
+
+button:hover {
+    background: #ffe082;
+    color: #d84315;
+    transform: scale(1.05);
+}
+
+#confirmacion {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 15px;
+    animation: fadeIn 0.3s ease;
+}
+
+.oculto {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-5px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* ---------- TEXTO EN FUEGO (Mantenido de la página 6) ---------- */
+.texto-fuego {
+    font-family: 'Impact', sans-serif;
+    font-size: 90px;
+    text-transform: uppercase;
+    position: relative;
+    color: transparent;
+    background: linear-gradient(90deg, #ff0000, #ff9900, #ffff00, #ff9900, #ff0000);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: moverFuego 2s infinite linear;
+    filter: brightness(1.3) drop-shadow(0 0 15px #ff8000)
+                            drop-shadow(0 0 40px #ff4000)
+                            drop-shadow(0 0 80px #ff0000);
+}
+
+/* Capa de resplandor y humo */
+.texto-fuego::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #ffdd00;
+    filter: blur(12px);
+    opacity: 0.8;
+    animation: brillar 2s infinite ease-in-out;
+}
+
+/* Llamas verticales simuladas */
+.texto-fuego::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        180deg,
+        rgba(255, 255, 0, 0.2) 0%,
+        rgba(255, 100, 0, 0.3) 20%,
+        rgba(255, 0, 0, 0.4) 40%,
+        transparent 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: llamas 1.5s infinite ease-in-out;
+    opacity: 0.7;
+}
+
+/* ---------- ANIMACIONES (Mantenidas de la página 6) ---------- */
+@keyframes moverFuego {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes brillar {
+    0%, 100% { filter: blur(12px) brightness(1); }
+    50% { filter: blur(15px) brightness(1.5); }
+}
+
+@keyframes llamas {
+    0% { background-position: 0% 100%; opacity: 0.8; }
+    50% { background-position: 0% 0%; opacity: 1; }
+    100% { background-position: 0% 100%; opacity: 0.8; }
+}
+
+/* --- RESPONSIVE (Añadido de la página 5) --- */
+@media (max-width: 768px) {
+    .barraLateral {
+        position: relative;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid white;
+        flex-direction: row;
+        justify-content: space-around;
+        top: 0; 
+        padding: 15px;
+    }
+
+    .contenido {
+        margin-left: 0;
+        padding: 15px;
+    }
 }

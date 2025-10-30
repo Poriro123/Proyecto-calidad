@@ -1,12 +1,13 @@
-/* --- ESTILO GENERAL --- */
+/* --- ESTILO GENERAL (Base de Tarjetas) --- */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(90deg, #ff4b2b, #ff9068);
     color: white;
-    text-align: center;
+    text-align: center; /* CLAVE: Centra los bloques/tarjetas */
 }
 
+/* --- HEADER (Original) --- */
 header {
     display: flex;
     justify-content: center;
@@ -26,24 +27,42 @@ header a:hover {
     text-decoration: underline;
 }
 
+/* --- INTRODUCCIÓN (Contenido principal) --- */
+.introInicio {
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
 .introInicio h1 {
     font-size: 2rem;
     margin: 10px 0 5px 0;
+    text-align: center;
 }
 
 .introInicio p {
     font-size: 1rem;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
+.introInicio ul {
+    list-style: square;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* --- ESTILO DE TARJETAS (Restaurado a tu estilo original) --- */
 .Gestion, .Procesos, .Metodologias, .Recursos, .Sobre {
-    background: transparent;
+    /* Ajustes para mejor visualización sobre el fondo */
+    background: rgba(255, 255, 255, 0.1); 
     border: 1px solid white;
     border-radius: 8px;
     padding: 20px;
-    margin: 10px;
-    width: 250px;
-    display: inline-block;
+    margin: 15px; /* Ajustado el margen para separarlas */
+    width: 280px; /* Ligeramente más anchas */
+    display: inline-block; /* CLAVE: Muestra las tarjetas horizontalmente */
     vertical-align: top;
     text-align: left;
     box-sizing: border-box;
@@ -52,15 +71,193 @@ header a:hover {
 
 .Gestion:hover, .Procesos:hover, .Metodologias:hover, .Recursos:hover, .Sobre:hover {
     transform: scale(1.03);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
 }
 
 .Gestion h2, .Procesos h2, .Metodologias h2, .Recursos h2, .Sobre h2 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     margin: 0 0 10px 0;
 }
 
 .Gestion p, .Procesos p, .Metodologias p, .Recursos p, .Sobre p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.Gestion ul, .Procesos ul, .Metodologias ul, .Recursos ul {
+    list-style: disc;
+    padding-left: 20px;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+/* Estilos para los enlaces "Leer más" que estaban en las tarjetas */
+.Gestion a, .Procesos a, .Metodologias a {
+    color: #ffde99; 
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.Gestion a:hover, .Procesos a:hover, .Metodologias a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* --- FUNCIONALIDADES ADICIONALES (US-18 y US-19) --- */
+/* NOTA: He usado los selectores #comparador y #encuesta que asumí para el HTML */
+
+/* Contenedor general para las secciones interactivas */
+.seccion {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2); 
+    border-radius: 10px;
+    text-align: center;
+}
+
+.seccion h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.seccion p {
+    margin-bottom: 20px;
+    font-size: 1rem;
     color: #fff;
 }
+
+/* US-18: COMPARADOR DE METODOLOGÍAS */
+#opciones-comparador {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+#opciones-comparador label {
+    font-size: 1.1em;
+    font-weight: normal;
+    padding: 8px 12px;
+    border: 2px solid #ff9068;
+    border-radius: 20px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    transition: background 0.3s, border-color 0.3s;
+}
+
+#opciones-comparador input[type="checkbox"] {
+    display: none; /* Ocultar el checkbox nativo */
+}
+
+#opciones-comparador input[type="checkbox"]:checked + label {
+    background: #ff4b2b; /* Color activo */
+    border-color: #fff;
+    font-weight: bold;
+}
+
+/* Estilos de la tabla de comparación generada por JS */
+#tabla-comparativa table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+
+#tabla-comparativa th, #tabla-comparativa td {
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#tabla-comparativa th {
+    background: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+/* US-19: ENCUESTA DE PREFERENCIAS METODOLÓGICAS */
+
+#formulario-encuesta {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    text-align: left; /* Alineación del formulario */
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.campo label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.campo select {
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 1em;
+    background: rgba(255,255,255,0.9);
+    color: #333;
+    outline: none;
+    cursor: pointer;
+}
+
+#formulario-encuesta button {
+    border: none;
+    background: white;
+    color: #ff4b2b;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1em;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#formulario-encuesta button:hover {
+    background: #ffe082;
+    color: #d84315;
+    transform: scale(1.01);
+}
+
+#resultado-encuesta {
+    color: #333;
+    background: #ffe082; 
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.oculto {
+    display: none;
+}
+
+/* --- RESPONSIVE BÁSICO para tarjetas --- */
+@media (max-width: 650px) {
+    .Gestion, .Procesos, .Metodologias, .Recursos, .Sobre {
+        width: 90%; /* Las tarjetas ocupan casi todo el ancho */
+        margin: 15px auto; /* Centrar las tarjetas */
+        display: block;
+    }
+}   
